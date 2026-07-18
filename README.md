@@ -52,8 +52,8 @@ GEMINI_API_KEY="your_google_key"
 MONGODB_URI="your_mongo_cluster_uri"
 TWILIO_ACCOUNT_SID="your_twilio_sid"
 TWILIO_AUTH_TOKEN="your_twilio_token"
-TWILIO_PHONE_NUMBER="+15551234567"
-YOUR_VERIFIED_PHONE="+18777804236" # Or your personal verified number
+TWILIO_PHONE_NUMBER="+............"
+YOUR_VERIFIED_PHONE="+............" # Or your personal verified number
 ```
 
 **3. Option A: Run via Docker (Recommended)**
