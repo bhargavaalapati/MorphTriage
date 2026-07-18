@@ -37,7 +37,7 @@ function App() {
     }
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/triage', {
+      const response = await fetch('https://morphtriage.onrender.com/api/triage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ raw_input: input })

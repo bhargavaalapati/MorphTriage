@@ -38,7 +38,7 @@ export default function DynamicWrapper({ uiData, setUiData, reset, isOffline }) 
   const submitProxyIntel = async () => {
     setIsSubmitting(true);
     try {
-      await fetch('http://127.0.0.1:8000/api/intel', {
+      await fetch('https://morphtriage.onrender.com/api/intel', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         // 🔴 NEW: Custom fallback text if no photo is uploaded
