@@ -9,6 +9,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [isOffline, setIsOffline] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
+  const [showWarning, setShowWarning] = useState(false);
 
   const startVoiceInput = () => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -21,7 +22,12 @@ function App() {
   };
 
   const handleTriage = async () => {
-    if (!input.trim()) return;
+    if (!input.trim()) {
+      setShowWarning(true);
+      setTimeout(() => setShowWarning(false), 2000); // Resets after 2 seconds
+      return;
+    }
+
     setLoading(true);
 
     if (isOffline) {
@@ -82,8 +88,16 @@ function App() {
             <button onClick={startVoiceInput} className={`absolute bottom-4 right-4 p-3 rounded-full ${isRecording ? 'bg-red-600 animate-pulse text-white' : 'bg-gray-800 text-gray-400 hover:text-white'}`}>🎙️</button>
           </div>
           
-          <button onClick={handleTriage} disabled={loading} className="w-full bg-blue-600 hover:bg-blue-500 text-white font-black text-lg py-5 rounded-2xl">
-            {loading ? 'PARSING...' : 'INITIALIZE TRIAGE LAYER'}
+          <button 
+            onClick={handleTriage} 
+            disabled={loading} 
+            className={`w-full font-black text-lg py-5 rounded-2xl transition-all duration-300 ${
+              showWarning 
+                ? 'bg-red-500 text-white shadow-[0_0_30px_rgba(239,68,68,0.6)] animate-pulse' 
+                : 'bg-blue-600 hover:bg-blue-500 text-white'
+            }`}
+          >
+            {loading ? 'PARSING...' : showWarning ? '⚠️ ENTER EMERGENCY DETAILS' : 'INITIALIZE TRIAGE LAYER'}
           </button>
         </div>
       </div>

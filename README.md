@@ -84,3 +84,37 @@ cd frontend
 npm install
 npm run dev
 ```
+
+---
+
+**🧪 Testing Data**
+
+**🚨 High Panic / Active Crisis (Triggers "Subtractive" Red Mode)**
+
+```
+These prompts contain high cognitive load, urgent linguistic markers, and first-person jeopardy.
+```
+
+(English): "Water is rising fast in the house! We are trapped on the second floor and the power just went out. Send rescue now!"
+
+(English): "There was a massive crash, my leg is trapped under the rubble and I can't breathe well. Please hurry!"
+
+(Telugu Variation): "వరద నీరు ఇంట్లోకి వచ్చేస్తుంది! మేము మొదటి అంతస్తులో చిక్కుకుపోయాము, దయచేసి వెంటనే కాపాడండి!"
+
+(Translation automatically handled by Gemini: "Flood water is entering the house! We are trapped on the first floor, please rescue us immediately!")
+
+---
+
+**👁️ Proxy / Detailed Observation (Triggers "Dashboard" Blue Mode)**
+
+```
+These prompts contain structural observations, calm reporting, and third-person perspectives.
+```
+
+(English): "Structural fire observed on 5th avenue. Flames visible on the third floor, approximately 5 people outside. No immediate casualties visible."
+
+(English): "Road blocked by landslide on Highway 4. Three civilian vehicles trapped in debris. Requesting heavy clearing machinery and a medical team."
+
+(English): "Verified visual on chemical spill near the industrial park. Sector 7 is evacuated, but smoke is drifting south. Maintaining safe perimeter."
+
+---
